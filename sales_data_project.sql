@@ -22,7 +22,7 @@ WHERE
     d.year = 2019;  
 
 
--- Total revenue generated in 2029
+-- Total revenue generated in 2019
 SELECT 
     SUM(sales_amount) AS total_revenue
 FROM
