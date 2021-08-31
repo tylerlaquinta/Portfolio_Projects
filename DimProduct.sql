@@ -1,32 +1,32 @@
 -- Cleansed DimProduct Table
 SELECT
-  p.[ProductKey],
-  p.[ProductAlternateKey] AS ProductItemCode,
+  p.ProductKey,
+  p.ProductAlternateKey] AS ProductItemCode,
   --,[ProductSubcategoryKey]
   --,[WeightUnitMeasureCode]
   --,[SizeUnitMeasureCode]
-  p.[EnglishProductName] AS ProductName,
+  p.EnglishProductName AS ProductName,
   ps.EnglishProductSubcategoryName AS Subcategory,
   pc.EnglishProductCategoryName AS ProductCategory,
   --,[SpanishProductName]
   --,[FrenchProductName]
   --,[StandardCost]
   --,[FinishedGoodsFlag]
-  p.[Color] AS ProductColor,
+  p.Color AS ProductColor,
   --,[SafetyStockLevel]
   --,[ReorderPoint]
   --,[ListPrice]
-  p.[Size] AS ProductSize,
+  p.Size AS ProductSize,
   --,[SizeRange]
   --,[Weight]
   --,[DaysToManufacture]
-  p.[ProductLine],
+  p.ProductLine,
   --,[DealerPrice]
   --,[Class]
   --,[Style]
-  p.[ModelName] AS ProductModelName,
+  p.ModelName AS ProductModelName,
   --,[LargePhoto]
-  p.[EnglishDescription] AS ProductDescription,
+  p.EnglishDescription AS ProductDescription,
   --,[FrenchDescription]
   --,[ChineseDescription]
   --,[ArabicDescription]
@@ -37,7 +37,7 @@ SELECT
   --,[TurkishDescription]
   --,[StartDate]
   --,[EndDate]
-  ISNULL(p.[Status], 'Outdated') AS [ProductStatus]
+  ISNULL(p.Status, 'Outdated') AS ProductStatus
 FROM [AdventureWorksDW2019].[dbo].[DimProduct] p
 LEFT JOIN dbo.DimProductSubcategory ps 
 	ON ps.ProductSubcategoryKey = p.ProductSubcategoryKey
