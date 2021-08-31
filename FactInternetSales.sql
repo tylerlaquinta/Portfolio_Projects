@@ -1,14 +1,14 @@
 -- Cleansed FactInternetSales Table
 SELECT
-  [ProductKey],
-  [OrderDateKey],
-  [DueDateKey],
-  [ShipDateKey],
-  [CustomerKey],
+  ProductKey,
+  OrderDateKey,
+  DueDateKey,
+  ShipDateKey,
+  CustomerKey,
   --,[PromotionKey]
   --,[CurrencyKey]
   --,[SalesTerritoryKey]
-  [SalesOrderNumber],
+  SalesOrderNumber,
   --,[SalesOrderLineNumber]
   --,[RevisionNumber]
   --,[OrderQuantity]
@@ -18,14 +18,14 @@ SELECT
   --,[DiscountAmount]
   --,[ProductStandardCost]
   --,[TotalProductCost]
-  [SalesAmount]
---,[TaxAmt]
---,[Freight]
---,[CarrierTrackingNumber]
---,[CustomerPONumber]
---,[OrderDate]
---,[DueDate]
---,[ShipDate]
+  SalesAmount
+  --,[TaxAmt]
+  --,[Freight]
+  --,[CarrierTrackingNumber]
+  --,[CustomerPONumber]
+  --,[OrderDate]
+  --,[DueDate]
+  --,[ShipDate]
 FROM [AdventureWorksDW2019].[dbo].[FactInternetSales]
 WHERE LEFT(OrderDateKey, 4) >= YEAR(GETDATE()) - 2  -- Fulfilling condition of the last 2 years
 ORDER BY OrderDateKey ASC
