@@ -1,7 +1,7 @@
 -- Cleansed DimProduct Table
 SELECT
   p.ProductKey,
-  p.ProductAlternateKey] AS ProductItemCode,
+  p.ProductAlternateKey AS ProductItemCode,
   --,[ProductSubcategoryKey]
   --,[WeightUnitMeasureCode]
   --,[SizeUnitMeasureCode]
