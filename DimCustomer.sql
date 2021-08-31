@@ -1,14 +1,14 @@
 -- Cleansed DimCustomer Table
 SELECT
-  c.[CustomerKey],
+  c.CustomerKey,
   --,[GeographyKey]
   -- ,[CustomerAlternateKey]
   --  ,[Title]
-  c.[FirstName]
+  c.FirstName
   --,[MiddleName]
   ,
-  c.[LastName],
-  c.FirstName + ' ' + c.LastName AS [FullName]
+  c.LastName,
+  c.FirstName + ' ' + c.LastName AS FullName
   --  ,[NameStyle]
   --  ,[BirthDate]
   --  ,[MaritalStatus]
@@ -19,8 +19,8 @@ SELECT
     WHEN 'F' THEN 'Female'
   END AS Gender,
   --,[EmailAddress]
-  --  ,[YearlyIncome]
-  --  ,[TotalChildren]
+  --,[YearlyIncome]
+  --,[TotalChildren]
   --,[NumberChildrenAtHome]
   --,[EnglishEducation]
   --,[SpanishEducation]
@@ -33,7 +33,7 @@ SELECT
   --,[AddressLine1]
   --,[AddressLine2]
   --,[Phone]
-  c.[DateFirstPurchase],
+  c.DateFirstPurchase,
   --,[CommuteDistance]
   g.City AS 'CustomerCity'
 FROM [AdventureWorksDW2019].[dbo].[DimCustomer] c
