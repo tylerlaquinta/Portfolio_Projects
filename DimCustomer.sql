@@ -4,16 +4,14 @@ SELECT
   --,[GeographyKey]
   -- ,[CustomerAlternateKey]
   --  ,[Title]
-  c.FirstName
+  c.FirstName,
   --,[MiddleName]
-  ,
   c.LastName,
-  c.FirstName + ' ' + c.LastName AS FullName
+  c.FirstName + ' ' + c.LastName AS FullName,
   --  ,[NameStyle]
   --  ,[BirthDate]
   --  ,[MaritalStatus]
   --  ,[Suffix]
-  ,
   CASE c.Gender
     WHEN 'M' THEN 'Male'
     WHEN 'F' THEN 'Female'
